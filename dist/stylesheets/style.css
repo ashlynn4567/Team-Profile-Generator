@@ -1,0 +1,103 @@
+:root {
+    --primary: #284b63;
+    --primary-rgba: 40, 75, 99;
+    --secondary: #4e7fa0;
+    --secondary-rgba: 78, 127, 160;
+    --tertiary: #584943;
+    --tertiary-rgba: 90, 68, 60;
+    --quaternary: #aa9a8c;
+    --quaternary-rgba: 170, 154, 140;
+    --dark: #161616;
+    --light: #ffffff;
+    --border-radius: 25px;
+}
+
+/* ALL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-height: 100vh;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* MY STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "droid-serif", serif;
+    color: var(--dark);
+    min-height: 100vh;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("../images/team-builder-background.jpg");
+    background-size: cover;
+    background-position: center;
+};
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+    padding: 2% 6%;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    margin: 0 1.2rem 1.2rem 1.2rem;
+    flex-wrap: wrap;
+    justify-items: space-around;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25rem;
+    margin: 0 1.2rem 1.2rem 1.2rem;
+    border: 3px solid var(--secondary);
+    background-color: rgba(var(--quaternary-rgba), 0.6);
+    color: var(--dark);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.card-content {
+    padding: 1rem;
+    font-size: x-small;
+}

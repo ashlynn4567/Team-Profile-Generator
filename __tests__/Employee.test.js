@@ -23,7 +23,7 @@ test("Verifies ID is created correctly in Employee constructor", () => {
 });
 
 test("Verifies email is created correctly in Employee constructor", () => {
-    const email = "ashley@yahoo.com";
+    const email = "ashley@email.com";
     const employee = new Employee("Ashley", 1, email);
 
     expect(employee.email).toBe(email);
@@ -44,7 +44,7 @@ test("Ensures employee.getId() returns employee's id", () => {
 });
 
 test("Ensures employee.getEmail() returns employee's email", () => {
-    const email = "ashley@yahoo.com";
+    const email = "ashley@email.com";
     const employee = new Employee("Ashley", 1, email);
 
     expect(employee.getEmail()).toBe(email);
@@ -52,7 +52,7 @@ test("Ensures employee.getEmail() returns employee's email", () => {
 
 test("Ensures employee.getRole() returns employee's role", () => {
     const role = "Employee";
-    const employee = new Employee("Ashley", 1, "ashley@yahoo.com");
+    const employee = new Employee("Ashley", 1, "ashley@email.com");
 
     expect(employee.getRole()).toBe(role);
 });
