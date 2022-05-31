@@ -13,7 +13,7 @@ const public = path.join(directory, "index.html");
 const teamArr = [];
 
 // use user input from prompts to generate HTML page
-const fillTemplate = () => {
+const writeHTML = () => {
     console.log("Generating a team page...");
     fs.writeFileSync(public, generatePage(teamArr), "utf-8");
     console.log("Page generated successfully!");
