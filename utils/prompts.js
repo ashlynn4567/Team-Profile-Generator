@@ -37,6 +37,7 @@ const createTeam = () => {
 };
 
 const decisionTree = () => {
+    console.log("Hello");
     return inquirer
         .prompt(
             [

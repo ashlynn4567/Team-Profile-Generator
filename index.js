@@ -16,4 +16,6 @@ const writeHTML = async (teamInfo) => {
 };
 
 // start application
-prompts.createTeam();
+prompts.createTeam().then(data => {
+    writeHTML(prompts.teamArr);
+})
