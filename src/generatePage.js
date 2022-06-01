@@ -56,31 +56,6 @@ const generateIntern = intern => {
     `
 }
 
-const addCards = team => {
-    // create empty array to hold generated cards
-    const cardArr = [];
-
-    // push employee cards to the cardArr
-    // manager
-    cardArr
-        .push()
-        .filter()
-        .map()
-        .join();
-    // engineer
-    cardArr
-        .push()
-        .filter()
-        .map();
-    // intern
-    cardArr
-        .push()
-        .filter()
-        .map()
-        .join();
-    
-};
-
 // putting together the whole template
 const generatePage = team => {
     return `
@@ -109,7 +84,9 @@ const generatePage = team => {
         <h1>Team Builder</h1>
         </div>
         <div class="card-container">
-            ${generatePage(team)}
+            ${generateManager(team)}
+            ${generateEngineer(team)}
+            ${generateIntern(team)}
         </div>
     </body>
     </html>
