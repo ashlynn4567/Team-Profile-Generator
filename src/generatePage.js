@@ -1,6 +1,6 @@
 // manager card generator
 const generateManager = manager => {
-    return `
+  return `
     <div class="card">
         <div class="card-content">
           <span class="icon"
@@ -31,7 +31,7 @@ const generateEngineer = engineer => {
           </h2>
           <p><b>Id:</b> <span>${engineer.getId()}</span></p>
           <p><b>Email:</b> <a href="mailto:${engineer.getEmail()}"><span>${engineer.getEmail()}</span></a></p>
-          <p><b>Github:</b> <a href="https://github.com/${engineer.getGithub()}" target="blank"><span>${engineer.getGithub}</span></p>
+          <p><b>Github:</b> <a href="https://github.com/${engineer.getGithub()}" target="blank"><span>${engineer.getGithub()}</span></a></p>
           <p><b>Role:</b> <span>${engineer.getRole()}</span></p>
         </div>
     </div>
@@ -56,9 +56,32 @@ const generateIntern = intern => {
     `
 }
 
+// card assembly function
+const assembleCards = teamArr => {
+  // create empty array into which the card information is pushed into
+  const cardArr = [];
+
+  cardArr
+    .push(teamArr
+      .filter(employee => employee.getRole() === "Manager")
+      .map(manager => generateManager(manager)));
+  cardArr
+    .push(teamArr
+    .filter(employee => employee.getRole() === "Engineer")
+    .map(engineer => generateEngineer(engineer))
+    .join(""));
+  cardArr
+    .push(teamArr
+    .filter(employee => employee.getRole() === "Intern")
+    .map(intern => generateIntern(intern))
+    .join(""));
+  
+  return cardArr.join("");
+};
+
 // putting together the whole template
 const generatePage = team => {
-    return `
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -84,9 +107,7 @@ const generatePage = team => {
         <h1>Team Builder</h1>
         </div>
         <div class="card-container">
-            ${generateManager(team)}
-            ${generateEngineer(team)}
-            ${generateIntern(team)}
+            ${assembleCards(team)}
         </div>
     </body>
     </html>

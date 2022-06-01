@@ -42,6 +42,10 @@ select {
     font: inherit;
 }
 
+a {
+    all: unset;
+}
+
 /* MY STYLING */
 body {
     margin: 0;
@@ -52,7 +56,8 @@ body {
     background-image: url("../images/team-builder-background.jpg");
     background-size: cover;
     background-position: center;
-};
+    color: var(--light);
+}
 
 h1,
 h2,
@@ -60,7 +65,7 @@ h3 {
   font-family: 'Roboto', sans-serif;
   line-height: 1.25;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0 0 0;
   color: var(--light);
 }
 
@@ -84,7 +89,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border: 3px solid var(--tertiary);
-    background-color: rgba(var(--quaternary-rgba), 0.8);
+    background-color: rgba(var(--quaternary-rgba), 0.95);
     flex: 0 1 calc(25% - 5em);
     margin: 0.5rem;
 }
@@ -105,6 +110,5 @@ p {
 }
 
 .card-content h2 {
-    padding: 0.3rem;
     font-size: x-large;
 }

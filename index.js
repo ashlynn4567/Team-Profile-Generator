@@ -1,5 +1,5 @@
 // imports
-const generatePage = require("./src/generatePage.js");
+const { generatePage } = require("./src/generatePage.js");
 const prompts = require("./utils/prompts");
 const fs = require("fs");
 const path = require("path");
@@ -16,6 +16,6 @@ const writeHTML = async (teamInfo) => {
 };
 
 // start application
-prompts.createTeam().then(data => {
+prompts.createTeam().then((data) => {
     writeHTML(prompts.teamArr);
 })

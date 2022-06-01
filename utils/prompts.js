@@ -10,12 +10,12 @@ const inquirer = require("inquirer");
 const teamArr = [];
 
 // ask user if they want to create a new team
-const createTeam = () => {    
+const createTeam = async () => {    
     console.log("================================================================");
     console.log("==========================TEAM BUILDER==========================");
     console.log("================================================================");
     console.log("Welcome to Team Builder!");
-    inquirer
+    return inquirer
         .prompt(
             [
                 {
@@ -26,18 +26,17 @@ const createTeam = () => {
                 }
             ]
         )
-        .then((answer) => {
+        .then(async (answer) => {
             // if yes, bring user to CRUD menu
             if (answer.createConfirm) {
-                decisionTree();
+                await decisionTree();
             } else {
                 console.log("Thanks for using Team Builder! Goodbye!");
             };
         });
 };
 
-const decisionTree = () => {
-    console.log("Hello");
+const decisionTree = async () => {
     return inquirer
         .prompt(
             [
@@ -54,10 +53,10 @@ const decisionTree = () => {
                 }
             ]
         )
-        .then((choiceAnswer) => {
+        .then(async (choiceAnswer) => {
             switch(choiceAnswer.choice) {
                 case "I would like to create a team member.":
-                    createMember();
+                    await createMember();
                     break
                 // case "I would like to delete a team member.":
                 //     createEngineer();
@@ -66,16 +65,13 @@ const decisionTree = () => {
                 //     createIntern();
                 //     break;
                 case "I am done creating my team. I would like to generate my webpage.":
-                    console.log(teamArr);
-                    // call writeHTML(teamArr);
-                    // writeHTML(teamArr);
                     break;
             }
         });
 }
 
 // ask user if they want to create a new team member (manager, engineer or intern)
-const createMember = () => {
+const createMember = async () => {
     return inquirer
         .prompt([
             {
@@ -90,19 +86,19 @@ const createMember = () => {
                ]
             }
         ])
-        .then((memberChoiceAnswer) => {
+        .then(async (memberChoiceAnswer) => {
             switch(memberChoiceAnswer.memberChoice) {
                 case "Manager":
-                    createManager();
+                    await createManager();
                     break
                 case "Engineer":
-                    createEngineer();
+                    await createEngineer();
                     break
                 case "Intern":
-                    createIntern();
+                    await createIntern();
                     break;
                 case "I do not want to add any more team members.":
-                    decisionTree();
+                    await decisionTree();
                     break;
             }
         }
@@ -110,7 +106,7 @@ const createMember = () => {
 };
 
 // create a new manager
-const createManager = () => {
+const createManager = async () => {
     console.log("================================================================");
     console.log("========================CREATE A MANAGER========================");
     console.log("================================================================");
@@ -158,18 +154,23 @@ const createManager = () => {
                 message: "What is the manager's office number?"
             }
         ])
-        .then((managerAnswers) => {
+        .then(async (managerAnswers) => {
             // create a new manager by inserting user input into the Manager constructor
-            const manager = new Manager(managerAnswers.managerName, managerAnswers.managerId, managerAnswers.managerEmail, managerAnswers.managerOfficeNumber);
+            const manager = new Manager(
+                managerAnswers.managerName, 
+                managerAnswers.managerId, 
+                managerAnswers.managerEmail, 
+                managerAnswers.managerOfficeNumber
+            );
             // push new manager into the team array
             teamArr.push(manager);
             // ask user if they want to add another team member
-            createMember();
+            await createMember();
         });
 };
 
 // create a new enginer
-const createEngineer = () => {
+const createEngineer = async () => {
     console.log("================================================================");
     console.log("=======================CREATE AN ENGINEER=======================");
     console.log("================================================================");
@@ -217,18 +218,23 @@ const createEngineer = () => {
                 message: "What is the engineer's GitHub link?"
             }
         ])
-        .then((engineerAnswers) => {
+        .then(async (engineerAnswers) => {
             // create a new engineer by inserting user input into the Engineer constructor
-            const engineer = new Engineer(engineerAnswers.engineerName, engineerAnswers.engineerId, engineerAnswers.engineerEmail, engineerAnswers.engineerGithub);
+            const engineer = new Engineer(
+                engineerAnswers.engineerName, 
+                engineerAnswers.engineerId, 
+                engineerAnswers.engineerEmail, 
+                engineerAnswers.engineerGithub
+            );
             // push new engineer into the team array
             teamArr.push(engineer);
             // ask user if they want to add another team member
-            createMember();
+            await createMember();
         });
 };
 
 // create a new intern
-const createIntern = () => {
+const createIntern = async () => {
     console.log("================================================================");
     console.log("========================CREATE AN INTERN========================");
     console.log("================================================================");
@@ -276,13 +282,18 @@ const createIntern = () => {
                 message: "What school does the intern attend?"
             }
         ])
-        .then((internAnswers) => {
+        .then(async (internAnswers) => {
             // create a new intern by inserting user input into the Intern constructor
-            const intern = new Intern(internAnswers.internName, internAnswers.internId, internAnswers.internEmail, internAnswers.internSchool);
+            const intern = new Intern(
+                internAnswers.internName, 
+                internAnswers.internId, 
+                internAnswers.internEmail, 
+                internAnswers.internSchool
+            );
             // push new intern into the team array
             teamArr.push(intern);
             // ask user if they want to add another team member
-            createMember();
+            await createMember();
         });
 };
 
