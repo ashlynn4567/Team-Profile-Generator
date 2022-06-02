@@ -90,7 +90,7 @@ p {
     transition: 0.3s;
     border: 3px solid var(--tertiary);
     background-color: rgba(var(--quaternary-rgba), 0.95);
-    flex: 0 1 calc(25% - 5em);
+    flex: 1 1 calc(25% - 2em);
     margin: 0.5rem;
 }
 
@@ -111,4 +111,23 @@ p {
 
 .card-content h2 {
     font-size: x-large;
+}
+
+/* MEDIA QUERIES*/
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
 }
