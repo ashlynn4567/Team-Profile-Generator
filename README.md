@@ -61,13 +61,13 @@ In order to run the testing suites through Jest:
 
 ## Technologies and Languages
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JavaScript](https://www.javascript.com/)
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-- [Jest](https://jestjs.io/)
-- [Inquirer.js](https://www.npmjs.com/package/inquirer)
+- HTML
+- CSS]
+- JavaScript
+- Node.js
+- npm
+- Jest
+- Inquirer.js
 
 ## Future Development
 
