@@ -62,7 +62,7 @@ In order to run the testing suites through Jest:
 ## Technologies and Languages
 
 - HTML
-- CSS]
+- CSS
 - JavaScript
 - Node.js
 - npm
