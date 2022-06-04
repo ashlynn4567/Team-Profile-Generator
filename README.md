@@ -24,19 +24,19 @@ This is how the generated HTML page will appear to users. It is responsive, adap
 This application was developed using Test-Driven Development techniques though Jest. If the user wishes to see which tests pass, they can simply open the application within the proper directory and run the command `npm test`.
 
 <p align="center">
-<img alt="A gif demonstrating how to run the Jest testing suite within the application directory." src="./dist/images/team-builder-jest.gif"/>
+<iframe src="https://drive.google.com/file/d/1p-DQwGmyZ_-eo6VgUg_amYxE8siRHYn2/preview" width="640" height="480"></iframe>
 </p>
 
 In order to run this application, users must have all dependencies installed. See the installation section below for instructions. To start the application, use the command `node index.js`.
 
 <p align="center">
-<img alt="A gif demonstrating how to begin running the application from the command line interface." src="./dist/images/team-builder-start.gif"/>
+<iframe src="https://drive.google.com/file/d/1LkRx3okDZEFF-astKyuGU3Z3p7uU0ANv/preview" width="640" height="480"></iframe>
 </p>
 
 Follow the prompts given in the command line interface to give information about your team. Some prompts are required. Once completed, an HTML file will generate in `dist/index.html`. Open the HTML in a browser to view your team's webpage.
 
 <p align="center">
-<img alt="A gif demonstrating how to run through each prompt in order to generate your team page." src="./dist/images/team-builder-demonstration.gif"/>
+<iframe src="https://drive.google.com/file/d/1CY1jFAw5lcKqw_hKgHDbOuveSs10NqdB/preview" width="640" height="480"></iframe>
 </p>
 
 ## Installation
