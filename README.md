@@ -32,14 +32,14 @@ In order to run this application, users must have all dependencies installed. Se
 
 <p align="center">
 <img alt="A gif demonstrating how to begin running the application from the command line interface." src="./dist/images/team-builder-start.gif"/>
-<br>Here's a <a href="https://drive.google.com/file/d/1LkRx3okDZEFF-astKyuGU3Z3p7uU0ANv/view" target="_blank>link</a> to the video version of the above gif.
+<br>Here's a <a href="https://drive.google.com/file/d/1LkRx3okDZEFF-astKyuGU3Z3p7uU0ANv/view" target="_blank">link</a> to the video version of the above gif.
 </p>
 
 Follow the prompts given in the command line interface to give information about your team. Some prompts are required. Once completed, an HTML file will generate in `dist/index.html`. Open the HTML in a browser to view your team's webpage.
 
 <p align="center">
 <img alt="A gif demonstrating how to run through each prompt in order to generate your team page." src="./dist/images/team-builder-demonstration.gif"/>
-<br>Here's a <a href="https://drive.google.com/file/d/1CY1jFAw5lcKqw_hKgHDbOuveSs10NqdB/view" target="_blank>link</a> to the video version of the above gif.
+<br>Here's a <a href="https://drive.google.com/file/d/1CY1jFAw5lcKqw_hKgHDbOuveSs10NqdB/view" target="_blank">link</a> to the video version of the above gif.
 </p>
 
 ## Installation
