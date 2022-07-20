@@ -76,7 +76,7 @@ In the future, I would like to add the following improvements:
 - Data permanence, so that you can load, edit, and delete your existing team data.
 - An option to view your team data in tables within the command line interface before your team data is generated into a webpage.
 
-I'm always interested in refactoring code to improve it's functionality. If you would like to suggest your own improvements, you can reach our development team at the links below.
+I'm always interested in refactoring code to improve it's functionality. If you would like to suggest your own improvements, you can reach me at the links below.
 
 - <a href="mailto:ashlynn4567@gmail.com">Email</a>
 - <a href="https://github.com/ashlynn4567">GitHub</a>
