@@ -11,7 +11,7 @@
 
 ## Description
 
-This is my tenth challenge assignment for the University of Oregon Coding Bootcamp 2022. The challenge is to create an application using Node.js that gathers information about employees to generate an HTML webpage displaying summaries for each person. There will also be basic code tests using the Jest framework.
+Team Profile Generator is an application that uses Node.js to gather information about employees so that users can generate an HTML webpage displaying summaries for each person. There are also basic code tests using the Jest framework to implement TDD methodologies.
 
 ## Features
 
